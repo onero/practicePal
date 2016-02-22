@@ -1,0 +1,28 @@
+{
+  "name": "practicepal",
+  "version": "1.0.0",
+  "description": "Practice App for Musicians",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onero/practicePal.git"
+  },
+  "author": "Adam Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onero/practicePal/issues"
+  },
+  "homepage": "https://github.com/onero/practicePal#readme",
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.2"
+  }
+}
