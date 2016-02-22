@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Practice Pal</title>
+    <!-- bower:css -->
+    <!-- endbower -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-    <!-- <link rel="stylesheet" src="styles/normalize.css">
-        <link rel="stylesheet" src="styles/main.css"> -->
+    <link rel="stylesheet" src="src/css/main.css">
   </head>
   <body>
     <header>
@@ -24,10 +25,12 @@
     </div>
 
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular-resource.min.js"></script>
-  <script src="/src/js/app.js"></script>
-  <script src="/src/js/controllers/main.js"></script>
-  <script src="/src/js/routes/routes.js"></script>
+</header>
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
+<script src="dist/app.min.js"></script>
 </html>
