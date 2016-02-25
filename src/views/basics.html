@@ -3,48 +3,252 @@
     <h1>Basics</h1>
     <div class="row">
       <div class="col-md-6">
-        <table class="table table-reflow">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-              <th>Table heading</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+        <table class="table table-bordered">
+          <h3>Left Hand Basics</h3>
+          <tr>
+            <th>Day</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <th>Shifting</th>
+            <td><input type="value" ng-model="day1.shifting"/></td>
+            <td><input type="value" ng-model="day2.shifting"/></td>
+            <td><input type="value" ng-model="day3.shifting"/></td>
+            <td><input type="value" ng-model="day4.shifting"/></td>
+            <td><input type="value" ng-model="day5.shifting"/></td>
+            <td><input type="value" ng-model="day6.shifting"/></td>
+            <td><input type="value" ng-model="day7.shifting"/></td>
+          </tr>
+        </tr>
+        <tr>
+          <th>Finger Dropping & lifting</th>
+          <td><input type="value" ng-model="day1.dropping"/></td>
+          <td><input type="value" ng-model="day2.dropping"/></td>
+          <td><input type="value" ng-model="day3.dropping"/></td>
+          <td><input type="value" ng-model="day4.dropping"/></td>
+          <td><input type="value" ng-model="day5.dropping"/></td>
+          <td><input type="value" ng-model="day6.dropping"/></td>
+          <td><input type="value" ng-model="day7.dropping"/></td>
+        </tr>
+        <tr>
+          <th>Vibrato</th>
+          <td><input type="value" ng-model="day1.vibrato"/></td>
+          <td><input type="value" ng-model="day2.vibrato"/></td>
+          <td><input type="value" ng-model="day3.vibrato"/></td>
+          <td><input type="value" ng-model="day4.vibrato"/></td>
+          <td><input type="value" ng-model="day5.vibrato"/></td>
+          <td><input type="value" ng-model="day6.vibrato"/></td>
+          <td><input type="value" ng-model="day7.vibrato"/></td>
+        </tr>
+        <tr>
+          <th>Pizzicato Left Hand</th>
+          <td><input type="value" ng-model="day1.pizzicato"/></td>
+          <td><input type="value" ng-model="day2.pizzicato"/></td>
+          <td><input type="value" ng-model="day3.pizzicato"/></td>
+          <td><input type="value" ng-model="day4.pizzicato"/></td>
+          <td><input type="value" ng-model="day5.pizzicato"/></td>
+          <td><input type="value" ng-model="day6.pizzicato"/></td>
+          <td><input type="value" ng-model="day7.pizzicato"/></td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <td>
+            <p>{{basics.lh.day1.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day2.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day3.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day4.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day5.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day6.total}}</p>
+          </td>
+          <td>
+            <p>{{basics.lh.day7.total}}</p>
+          </td>
+        </tr>
+      </table>
+      <table class="table table-bordered">
+        <h3>Right Hand Basics</h3>
+        <tr>
+          <th>Day</th>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <th>Bow Balance</th>
+          <td><input type="value" ng-model="day1.balance"/></td>
+          <td><input type="value" ng-model="day2.balance"/></td>
+          <td><input type="value" ng-model="day3.balance"/></td>
+          <td><input type="value" ng-model="day4.balance"/></td>
+          <td><input type="value" ng-model="day5.balance"/></td>
+          <td><input type="value" ng-model="day6.balance"/></td>
+          <td><input type="value" ng-model="day7.balance"/></td>
+        </tr>
+      </tr>
+      <tr>
+        <th>Pressure, Speed, S. Point</th>
+        <td><input type="value" ng-model="day1.ppsp"/></td>
+        <td><input type="value" ng-model="day2.ppsp"/></td>
+        <td><input type="value" ng-model="day3.ppsp"/></td>
+        <td><input type="value" ng-model="day4.ppsp"/></td>
+        <td><input type="value" ng-model="day5.ppsp"/></td>
+        <td><input type="value" ng-model="day6.ppsp"/></td>
+        <td><input type="value" ng-model="day7.ppsp"/></td>
+      </tr>
+      <tr>
+        <th>Bow Changes</th>
+        <td><input type="value" ng-model="day1.changes"/></td>
+        <td><input type="value" ng-model="day2.changes"/></td>
+        <td><input type="value" ng-model="day3.changes"/></td>
+        <td><input type="value" ng-model="day4.changes"/></td>
+        <td><input type="value" ng-model="day5.changes"/></td>
+        <td><input type="value" ng-model="day6.changes"/></td>
+        <td><input type="value" ng-model="day7.changes"/></td>
+      </tr>
+      <tr>
+        <th>Detaché</th>
+        <td><input type="value" ng-model="day1.detache"/></td>
+        <td><input type="value" ng-model="day2.detache"/></td>
+        <td><input type="value" ng-model="day3.detache"/></td>
+        <td><input type="value" ng-model="day4.detache"/></td>
+        <td><input type="value" ng-model="day5.detache"/></td>
+        <td><input type="value" ng-model="day6.detache"/></td>
+        <td><input type="value" ng-model="day7.detache"/></td>
+      </tr>
+      <tr>
+        <th>Legato</th>
+        <td><input type="value" ng-model="day1.legato"/></td>
+        <td><input type="value" ng-model="day2.legato"/></td>
+        <td><input type="value" ng-model="day3.legato"/></td>
+        <td><input type="value" ng-model="day4.legato"/></td>
+        <td><input type="value" ng-model="day5.legato"/></td>
+        <td><input type="value" ng-model="day6.legato"/></td>
+        <td><input type="value" ng-model="day7.legato"/></td>
+      </tr>
+      <tr>
+        <th>Collé</th>
+        <td><input type="value" ng-model="day1.colle"/></td>
+        <td><input type="value" ng-model="day2.colle"/></td>
+        <td><input type="value" ng-model="day3.colle"/></td>
+        <td><input type="value" ng-model="day4.colle"/></td>
+        <td><input type="value" ng-model="day5.colle"/></td>
+        <td><input type="value" ng-model="day6.colle"/></td>
+        <td><input type="value" ng-model="day7.colle"/></td>
+      </tr>
+      <tr>
+        <th>Martelé</th>
+        <td><input type="value" ng-model="day1.martele"/></td>
+        <td><input type="value" ng-model="day2.martele"/></td>
+        <td><input type="value" ng-model="day3.martele"/></td>
+        <td><input type="value" ng-model="day4.martele"/></td>
+        <td><input type="value" ng-model="day5.martele"/></td>
+        <td><input type="value" ng-model="day6.martele"/></td>
+        <td><input type="value" ng-model="day7.martele"/></td>
+      </tr>
+      <tr>
+        <th>Staccato</th>
+        <td><input type="value" ng-model="day1.staccato"/></td>
+        <td><input type="value" ng-model="day2.staccato"/></td>
+        <td><input type="value" ng-model="day3.staccato"/></td>
+        <td><input type="value" ng-model="day4.staccato"/></td>
+        <td><input type="value" ng-model="day5.staccato"/></td>
+        <td><input type="value" ng-model="day6.staccato"/></td>
+        <td><input type="value" ng-model="day7.staccato"/></td>
+      </tr>
+      <tr>
+        <th>Spiccato</th>
+        <td><input type="value" ng-model="day1.spiccato"/></td>
+        <td><input type="value" ng-model="day2.spiccato"/></td>
+        <td><input type="value" ng-model="day3.spiccato"/></td>
+        <td><input type="value" ng-model="day4.spiccato"/></td>
+        <td><input type="value" ng-model="day5.spiccato"/></td>
+        <td><input type="value" ng-model="day6.spiccato"/></td>
+        <td><input type="value" ng-model="day7.spiccato"/></td>
+      </tr>
+      <tr>
+        <th>Sautillé</th>
+        <td><input type="value" ng-model="day1.sautille"/></td>
+        <td><input type="value" ng-model="day2.sautille"/></td>
+        <td><input type="value" ng-model="day3.sautille"/></td>
+        <td><input type="value" ng-model="day4.sautille"/></td>
+        <td><input type="value" ng-model="day5.sautille"/></td>
+        <td><input type="value" ng-model="day6.sautille"/></td>
+        <td><input type="value" ng-model="day7.sautille"/></td>
+      </tr>
+      <tr>
+        <th>Ricochet</th>
+        <td><input type="value" ng-model="day1.ricochet"/></td>
+        <td><input type="value" ng-model="day2.ricochet"/></td>
+        <td><input type="value" ng-model="day3.ricochet"/></td>
+        <td><input type="value" ng-model="day4.ricochet"/></td>
+        <td><input type="value" ng-model="day5.ricochet"/></td>
+        <td><input type="value" ng-model="day6.ricochet"/></td>
+        <td><input type="value" ng-model="day7.ricochet"/></td>
+      </tr>
+      <tr>
+        <th>3 Voice Chords</th>
+        <td><input type="value" ng-model="day1.chords3"/></td>
+        <td><input type="value" ng-model="day2.chords3"/></td>
+        <td><input type="value" ng-model="day3.chords3"/></td>
+        <td><input type="value" ng-model="day4.chords3"/></td>
+        <td><input type="value" ng-model="day5.chords3"/></td>
+        <td><input type="value" ng-model="day6.chords3"/></td>
+        <td><input type="value" ng-model="day7.chords3"/></td>
+      </tr>
+      <tr>
+        <th>4 Voice Chords</th>
+        <td><input type="value" ng-model="day1.chords4"/></td>
+        <td><input type="value" ng-model="day2.chords4"/></td>
+        <td><input type="value" ng-model="day3.chords4"/></td>
+        <td><input type="value" ng-model="day4.chords4"/></td>
+        <td><input type="value" ng-model="day5.chords4"/></td>
+        <td><input type="value" ng-model="day6.chords4"/></td>
+        <td><input type="value" ng-model="day7.chords4"/></td>
+      </tr>
+      <tr>
+        <th>Total</th>
+        <td>
+          <p>{{basics.rh.day1.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day2.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day3.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day4.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day5.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day6.total}}</p>
+        </td>
+        <td>
+          <p>{{basics.rh.day7.total}}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</section>

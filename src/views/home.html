@@ -4,67 +4,72 @@
     <div class="row">
       <div class="col-md-6">
         <table class="table table-bordered table-reflow">
-          <thead>
-            <tr>
-              <th>Day</th>
-              <th>Basics</th>
-              <th>Scales</th>
-              <th>Etudes</th>
-              <th>Main piece</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><input type="value" ng-model="week1.basics"/></td>
-              <td><input type="value" ng-model="week1.scales"/></td>
-              <td><input type="value" ng-model="week1.etudes"/></td>
-              <td><input type="value" ng-model="week1.piece"/></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><input type="value" ng-model="week2.basics"/></td>
-              <td><input type="value" ng-model="week2.scales"/></td>
-              <td><input type="value" ng-model="week2.etudes"/></td>
-              <td><input type="value" ng-model="week2.piece"/></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><input type="value" ng-model="week3.basics"/></td>
-              <td><input type="value" ng-model="week3.scales"/></td>
-              <td><input type="value" ng-model="week3.etudes"/></td>
-              <td><input type="value" ng-model="week3.piece"/></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><input type="value" ng-model="week4.basics"/></td>
-              <td><input type="value" ng-model="week4.scales"/></td>
-              <td><input type="value" ng-model="week4.etudes"/></td>
-              <td><input type="value" ng-model="week4.piece"/></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td><input type="value" ng-model="week5.basics"/></td>
-              <td><input type="value" ng-model="week5.scales"/></td>
-              <td><input type="value" ng-model="week5.etudes"/></td>
-              <td><input type="value" ng-model="week5.piece"/></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td><input type="value" ng-model="week6.basics"/></td>
-              <td><input type="value" ng-model="week6.scales"/></td>
-              <td><input type="value" ng-model="week6.etudes"/></td>
-              <td><input type="value" ng-model="week6.piece"/></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td><input type="value" ng-model="week7.basics"/></td>
-              <td><input type="value" ng-model="week7.scales"/></td>
-              <td><input type="value" ng-model="week7.etudes"/></td>
-              <td><input type="value" ng-model="week7.piece"/></td>
-            </tr>
-          </tbody>
-        </table>
+          <tr>
+            <th>Day</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <th>Basics</th>
+            <td>{{day1.basics}}</td>
+            <td>{{day2.basics}}</td>
+            <td>{{day3.basics}}</td>
+            <td>{{day4.basics}}</td>
+            <td>{{day5.basics}}</td>
+            <td>{{day6.basics}}</td>
+            <td>{{day7.basics}}</td>
+          </tr>
+        </tr>
+        <tr>
+          <th>Scales</th>
+          <td>{{day1.scales}}</td>
+          <td>{{day2.scales}}</td>
+          <td>{{day3.scales}}</td>
+          <td>{{day4.scales}}</td>
+          <td>{{day5.scales}}</td>
+          <td>{{day6.scales}}</td>
+          <td>{{day7.scales}}</td>
+        </tr>
+        <tr>
+          <th>Etudes</th>
+          <td>{{day1.etudes}}</td>
+          <td>{{day2.etudes}}</td>
+          <td>{{day3.etudes}}</td>
+          <td>{{day4.etudes}}</td>
+          <td>{{day5.etudes}}</td>
+          <td>{{day6.etudes}}</td>
+          <td>{{day7.etudes}}</td>
+        </tr>
+        <tr>
+          <th>Piece</th>
+          <td>{{day1.piece}}</td>
+          <td>{{day2.basics}}</td>
+          <td>{{day3.basics}}</td>
+          <td>{{day4.basics}}</td>
+          <td>{{day5.basics}}</td>
+          <td>{{day6.basics}}</td>
+          <td>{{day7.basics}}</td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <td><p>{{day1.total}}</p></td>
+          <td><p>{{day2.total}}</p></td>
+          <td><p>{{day3.total}}</p></td>
+          <td><p>{{day4.total}}</p></td>
+          <td><p>{{day5.total}}</p></td>
+          <td><p>{{day6.total}}</p></td>
+          <td><p>{{day7.total}}</p></td>
+        </tr>
+      </table>
+      <div>
+        <h3>Week total practiced time</h3>
+        <p>{{week.total}}</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
