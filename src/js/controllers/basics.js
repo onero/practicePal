@@ -1,10 +1,8 @@
 'use strict'
 
 angular.module('practicePal')
-  .controller('mainCtrl', function($scope) {
+  .controller('basicsCtrl', function($scope) {
 
-
-  //<---------------Basics---------------->
     function Basics(data) {
       this.positions = {
         shifting: 0,
@@ -50,8 +48,6 @@ angular.module('practicePal')
     for (var i = 0; i < 7; i++) {
       $scope['day' + (i + 1)] = new Basics({});
     }
-
-  //<---------------Scales---------------->
 
 
   });
