@@ -12,11 +12,11 @@ practicePal.config(function ($stateProvider, $urlRouterProvider) {
    .state('basics', {
      url: "/basics",
      templateUrl: "src/views/basics.html",
-     controller: "basicsCtrl"
+     controller: "mainCtrl"
    })
    .state('scales', {
      url: "/scales",
      templateUrl: "src/views/scales.html",
-     controller: "scalesCtrl"
+     controller: "mainCtrl"
    })
 });

@@ -17,62 +17,67 @@
           </tr>
           <tr>
             <th>Shifting</th>
-            <td><input type="number" ng-model="day1.shifting" ng-keyup="day1LhTotal()"/></td>
-            <td><input type="number" ng-model="day2.shifting"/></td>
-            <td><input type="number" ng-model="day3.shifting"/></td>
-            <td><input type="number" ng-model="day4.shifting"/></td>
-            <td><input type="number" ng-model="day5.shifting"/></td>
-            <td><input type="number" ng-model="day6.shifting"/></td>
-            <td><input type="number" ng-model="day7.shifting"/></td>
+            <td><input type="number" ng-model="day1.positions.shifting"/></td>
+            <td><input type="number" ng-model="day2.positions.shifting"/></td>
+            <td><input type="number" ng-model="day3.positions.shifting"/></td>
+            <td><input type="number" ng-model="day4.positions.shifting"/></td>
+            <td><input type="number" ng-model="day5.positions.shifting"/></td>
+            <td><input type="number" ng-model="day6.positions.shifting"/></td>
+            <td><input type="number" ng-model="day7.positions.shifting"/></td>
           </tr>
         </tr>
         <tr>
           <th>Finger Dropping & lifting</th>
-          <td><input type="number" ng-model="day1.dropping"/></td>
-          <td><input type="number" ng-model="day2.dropping"/></td>
-          <td><input type="number" ng-model="day3.dropping"/></td>
-          <td><input type="number" ng-model="day4.dropping"/></td>
-          <td><input type="number" ng-model="day5.dropping"/></td>
-          <td><input type="number" ng-model="day6.dropping"/></td>
-          <td><input type="number" ng-model="day7.dropping"/></td>
+          <td><input type="number" ng-model="day1.positions.dropping"/></td>
+          <td><input type="number" ng-model="day2.positions.dropping"/></td>
+          <td><input type="number" ng-model="day3.positions.dropping"/></td>
+          <td><input type="number" ng-model="day4.positions.dropping"/></td>
+          <td><input type="number" ng-model="day5.positions.dropping"/></td>
+          <td><input type="number" ng-model="day6.positions.dropping"/></td>
+          <td><input type="number" ng-model="day7.positions.dropping"/></td>
         </tr>
         <tr>
           <th>Vibrato</th>
-          <td><input type="number" ng-model="day1.vibrato"/></td>
-          <td><input type="number" ng-model="day2.vibrato"/></td>
-          <td><input type="number" ng-model="day3.vibrato"/></td>
-          <td><input type="number" ng-model="day4.vibrato"/></td>
-          <td><input type="number" ng-model="day5.vibrato"/></td>
-          <td><input type="number" ng-model="day6.vibrato"/></td>
-          <td><input type="number" ng-model="day7.vibrato"/></td>
+          <td><input type="number" ng-model="day1.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day2.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day3.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day4.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day5.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day6.positions.vibrato"/></td>
+          <td><input type="number" ng-model="day7.positions.vibrato"/></td>
         </tr>
         <tr>
           <th>Pizzicato Left Hand</th>
-          <td><input type="number" ng-model="day1.pizzicato"/></td>
-          <td><input type="number" ng-model="day2.pizzicato"/></td>
-          <td><input type="number" ng-model="day3.pizzicato"/></td>
-          <td><input type="number" ng-model="day4.pizzicato"/></td>
-          <td><input type="number" ng-model="day5.pizzicato"/></td>
-          <td><input type="number" ng-model="day6.pizzicato"/></td>
-          <td><input type="number" ng-model="day7.pizzicato"/></td>
+          <td><input type="number" ng-model="day1.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day2.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day3.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day4.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day5.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day6.positions.pizzicato"/></td>
+          <td><input type="number" ng-model="day7.positions.pizzicato"/></td>
         </tr>
         <tr>
           <th>Total</th>
           <td>
-            <p>{{day1.shifting + day1.dropping + day1.vibrato + day1.pizzicato}}</p>
+            <p>{{day1.lhTotal() | time:'mm':'hhh mmm':false}}</p>
           </td>
           <td>
-            <p>{{day2.shifting + day2.dropping + day2.vibrato + day2.pizzicato}}</p>
-          </td><td>
-            <p>{{day3.shifting + day3.dropping + day3.vibrato + day3.pizzicato}}</p>
-          </td><td>
-            <p>{{day4.shifting + day4.dropping + day4.vibrato + day4.pizzicato}}</p>
-          </td><td>
-            <p>{{day5.shifting + day5.dropping + day5.vibrato + day5.pizzicato}}</p>
-          </td><td>
-            <p>{{day6.shifting + day6.dropping + day6.vibrato + day6.pizzicato}}</p>
-          </td><td>
-            <p>{{day7.shifting + day7.dropping + day7.vibrato + day7.pizzicato}}</p>
+            <p>{{day2.lhTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day3.lhTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day4.lhTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day5.lhTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day6.lhTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day7.lhTotal() | time:'mm':'hhh mmm':false}}</p>
           </td>
         </tr>
       </table>
@@ -90,157 +95,157 @@
         </tr>
         <tr>
           <th>Bow Balance</th>
-          <td><input type="number" ng-model="day1.balance"/></td>
-          <td><input type="number" ng-model="day2.balance"/></td>
-          <td><input type="number" ng-model="day3.balance"/></td>
-          <td><input type="number" ng-model="day4.balance"/></td>
-          <td><input type="number" ng-model="day5.balance"/></td>
-          <td><input type="number" ng-model="day6.balance"/></td>
-          <td><input type="number" ng-model="day7.balance"/></td>
+          <td><input type="number" ng-model="day1.positions.balance"/></td>
+          <td><input type="number" ng-model="day2.positions.balance"/></td>
+          <td><input type="number" ng-model="day3.positions.balance"/></td>
+          <td><input type="number" ng-model="day4.positions.balance"/></td>
+          <td><input type="number" ng-model="day5.positions.balance"/></td>
+          <td><input type="number" ng-model="day6.positions.balance"/></td>
+          <td><input type="number" ng-model="day7.positions.balance"/></td>
         </tr>
       </tr>
       <tr>
         <th>Pressure, Speed, S. Point</th>
-        <td><input type="number" ng-model="day1.ppsp"/></td>
-        <td><input type="number" ng-model="day2.ppsp"/></td>
-        <td><input type="number" ng-model="day3.ppsp"/></td>
-        <td><input type="number" ng-model="day4.ppsp"/></td>
-        <td><input type="number" ng-model="day5.ppsp"/></td>
-        <td><input type="number" ng-model="day6.ppsp"/></td>
-        <td><input type="number" ng-model="day7.ppsp"/></td>
+        <td><input type="number" ng-model="day1.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day2.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day3.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day4.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day5.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day6.positions.ppsp"/></td>
+        <td><input type="number" ng-model="day7.positions.ppsp"/></td>
       </tr>
       <tr>
         <th>Bow Changes</th>
-        <td><input type="number" ng-model="day1.changes"/></td>
-        <td><input type="number" ng-model="day2.changes"/></td>
-        <td><input type="number" ng-model="day3.changes"/></td>
-        <td><input type="number" ng-model="day4.changes"/></td>
-        <td><input type="number" ng-model="day5.changes"/></td>
-        <td><input type="number" ng-model="day6.changes"/></td>
-        <td><input type="number" ng-model="day7.changes"/></td>
+        <td><input type="number" ng-model="day1.positions.changes"/></td>
+        <td><input type="number" ng-model="day2.positions.changes"/></td>
+        <td><input type="number" ng-model="day3.positions.changes"/></td>
+        <td><input type="number" ng-model="day4.positions.changes"/></td>
+        <td><input type="number" ng-model="day5.positions.changes"/></td>
+        <td><input type="number" ng-model="day6.positions.changes"/></td>
+        <td><input type="number" ng-model="day7.positions.changes"/></td>
       </tr>
       <tr>
         <th>Detaché</th>
-        <td><input type="number" ng-model="day1.detache"/></td>
-        <td><input type="number" ng-model="day2.detache"/></td>
-        <td><input type="number" ng-model="day3.detache"/></td>
-        <td><input type="number" ng-model="day4.detache"/></td>
-        <td><input type="number" ng-model="day5.detache"/></td>
-        <td><input type="number" ng-model="day6.detache"/></td>
-        <td><input type="number" ng-model="day7.detache"/></td>
+        <td><input type="number" ng-model="day1.positions.detache"/></td>
+        <td><input type="number" ng-model="day2.positions.detache"/></td>
+        <td><input type="number" ng-model="day3.positions.detache"/></td>
+        <td><input type="number" ng-model="day4.positions.detache"/></td>
+        <td><input type="number" ng-model="day5.positions.detache"/></td>
+        <td><input type="number" ng-model="day6.positions.detache"/></td>
+        <td><input type="number" ng-model="day7.positions.detache"/></td>
       </tr>
       <tr>
         <th>Legato</th>
-        <td><input type="number" ng-model="day1.legato"/></td>
-        <td><input type="number" ng-model="day2.legato"/></td>
-        <td><input type="number" ng-model="day3.legato"/></td>
-        <td><input type="number" ng-model="day4.legato"/></td>
-        <td><input type="number" ng-model="day5.legato"/></td>
-        <td><input type="number" ng-model="day6.legato"/></td>
-        <td><input type="number" ng-model="day7.legato"/></td>
+        <td><input type="number" ng-model="day1.positions.legato"/></td>
+        <td><input type="number" ng-model="day2.positions.legato"/></td>
+        <td><input type="number" ng-model="day3.positions.legato"/></td>
+        <td><input type="number" ng-model="day4.positions.legato"/></td>
+        <td><input type="number" ng-model="day5.positions.legato"/></td>
+        <td><input type="number" ng-model="day6.positions.legato"/></td>
+        <td><input type="number" ng-model="day7.positions.legato"/></td>
       </tr>
       <tr>
         <th>Collé</th>
-        <td><input type="number" ng-model="day1.colle"/></td>
-        <td><input type="number" ng-model="day2.colle"/></td>
-        <td><input type="number" ng-model="day3.colle"/></td>
-        <td><input type="number" ng-model="day4.colle"/></td>
-        <td><input type="number" ng-model="day5.colle"/></td>
-        <td><input type="number" ng-model="day6.colle"/></td>
-        <td><input type="number" ng-model="day7.colle"/></td>
+        <td><input type="number" ng-model="day1.positions.colle"/></td>
+        <td><input type="number" ng-model="day2.positions.colle"/></td>
+        <td><input type="number" ng-model="day3.positions.colle"/></td>
+        <td><input type="number" ng-model="day4.positions.colle"/></td>
+        <td><input type="number" ng-model="day5.positions.colle"/></td>
+        <td><input type="number" ng-model="day6.positions.colle"/></td>
+        <td><input type="number" ng-model="day7.positions.colle"/></td>
       </tr>
       <tr>
         <th>Martelé</th>
-        <td><input type="number" ng-model="day1.martele"/></td>
-        <td><input type="number" ng-model="day2.martele"/></td>
-        <td><input type="number" ng-model="day3.martele"/></td>
-        <td><input type="number" ng-model="day4.martele"/></td>
-        <td><input type="number" ng-model="day5.martele"/></td>
-        <td><input type="number" ng-model="day6.martele"/></td>
-        <td><input type="number" ng-model="day7.martele"/></td>
+        <td><input type="number" ng-model="day1.positions.martele"/></td>
+        <td><input type="number" ng-model="day2.positions.martele"/></td>
+        <td><input type="number" ng-model="day3.positions.martele"/></td>
+        <td><input type="number" ng-model="day4.positions.martele"/></td>
+        <td><input type="number" ng-model="day5.positions.martele"/></td>
+        <td><input type="number" ng-model="day6.positions.martele"/></td>
+        <td><input type="number" ng-model="day7.positions.martele"/></td>
       </tr>
       <tr>
         <th>Staccato</th>
-        <td><input type="number" ng-model="day1.staccato"/></td>
-        <td><input type="number" ng-model="day2.staccato"/></td>
-        <td><input type="number" ng-model="day3.staccato"/></td>
-        <td><input type="number" ng-model="day4.staccato"/></td>
-        <td><input type="number" ng-model="day5.staccato"/></td>
-        <td><input type="number" ng-model="day6.staccato"/></td>
-        <td><input type="number" ng-model="day7.staccato"/></td>
+        <td><input type="number" ng-model="day1.positions.staccato"/></td>
+        <td><input type="number" ng-model="day2.positions.staccato"/></td>
+        <td><input type="number" ng-model="day3.positions.staccato"/></td>
+        <td><input type="number" ng-model="day4.positions.staccato"/></td>
+        <td><input type="number" ng-model="day5.positions.staccato"/></td>
+        <td><input type="number" ng-model="day6.positions.staccato"/></td>
+        <td><input type="number" ng-model="day7.positions.staccato"/></td>
       </tr>
       <tr>
         <th>Spiccato</th>
-        <td><input type="number" ng-model="day1.spiccato"/></td>
-        <td><input type="number" ng-model="day2.spiccato"/></td>
-        <td><input type="number" ng-model="day3.spiccato"/></td>
-        <td><input type="number" ng-model="day4.spiccato"/></td>
-        <td><input type="number" ng-model="day5.spiccato"/></td>
-        <td><input type="number" ng-model="day6.spiccato"/></td>
-        <td><input type="number" ng-model="day7.spiccato"/></td>
+        <td><input type="number" ng-model="day1.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day2.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day3.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day4.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day5.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day6.positions.spiccato"/></td>
+        <td><input type="number" ng-model="day7.positions.spiccato"/></td>
       </tr>
       <tr>
         <th>Sautillé</th>
-        <td><input type="number" ng-model="day1.sautille"/></td>
-        <td><input type="number" ng-model="day2.sautille"/></td>
-        <td><input type="number" ng-model="day3.sautille"/></td>
-        <td><input type="number" ng-model="day4.sautille"/></td>
-        <td><input type="number" ng-model="day5.sautille"/></td>
-        <td><input type="number" ng-model="day6.sautille"/></td>
-        <td><input type="number" ng-model="day7.sautille"/></td>
+        <td><input type="number" ng-model="day1.positions.sautille"/></td>
+        <td><input type="number" ng-model="day2.positions.sautille"/></td>
+        <td><input type="number" ng-model="day3.positions.sautille"/></td>
+        <td><input type="number" ng-model="day4.positions.sautille"/></td>
+        <td><input type="number" ng-model="day5.positions.sautille"/></td>
+        <td><input type="number" ng-model="day6.positions.sautille"/></td>
+        <td><input type="number" ng-model="day7.positions.sautille"/></td>
       </tr>
       <tr>
         <th>Ricochet</th>
-        <td><input type="number" ng-model="day1.ricochet"/></td>
-        <td><input type="number" ng-model="day2.ricochet"/></td>
-        <td><input type="number" ng-model="day3.ricochet"/></td>
-        <td><input type="number" ng-model="day4.ricochet"/></td>
-        <td><input type="number" ng-model="day5.ricochet"/></td>
-        <td><input type="number" ng-model="day6.ricochet"/></td>
-        <td><input type="number" ng-model="day7.ricochet"/></td>
+        <td><input type="number" ng-model="day1.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day2.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day3.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day4.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day5.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day6.positions.ricochet"/></td>
+        <td><input type="number" ng-model="day7.positions.ricochet"/></td>
       </tr>
       <tr>
         <th>3 Voice Chords</th>
-        <td><input type="number" ng-model="day1.chords3"/></td>
-        <td><input type="number" ng-model="day2.chords3"/></td>
-        <td><input type="number" ng-model="day3.chords3"/></td>
-        <td><input type="number" ng-model="day4.chords3"/></td>
-        <td><input type="number" ng-model="day5.chords3"/></td>
-        <td><input type="number" ng-model="day6.chords3"/></td>
-        <td><input type="number" ng-model="day7.chords3"/></td>
+        <td><input type="number" ng-model="day1.positions.chords3"/></td>
+        <td><input type="number" ng-model="day2.positions.chords3"/></td>
+        <td><input type="number" ng-model="day3.positions.chords3"/></td>
+        <td><input type="number" ng-model="day4.positions.chords3"/></td>
+        <td><input type="number" ng-model="day5.positions.chords3"/></td>
+        <td><input type="number" ng-model="day6.positions.chords3"/></td>
+        <td><input type="number" ng-model="day7.positions.chords3"/></td>
       </tr>
       <tr>
         <th>4 Voice Chords</th>
-        <td><input type="number" ng-model="day1.chords4"/></td>
-        <td><input type="number" ng-model="day2.chords4"/></td>
-        <td><input type="number" ng-model="day3.chords4"/></td>
-        <td><input type="number" ng-model="day4.chords4"/></td>
-        <td><input type="number" ng-model="day5.chords4"/></td>
-        <td><input type="number" ng-model="day6.chords4"/></td>
-        <td><input type="number" ng-model="day7.chords4"/></td>
+        <td><input type="number" ng-model="day1.positions.chords4"/></td>
+        <td><input type="number" ng-model="day2.positions.chords4"/></td>
+        <td><input type="number" ng-model="day3.positions.chords4"/></td>
+        <td><input type="number" ng-model="day4.positions.chords4"/></td>
+        <td><input type="number" ng-model="day5.positions.chords4"/></td>
+        <td><input type="number" ng-model="day6.positions.chords4"/></td>
+        <td><input type="number" ng-model="day7.positions.chords4"/></td>
       </tr>
       <tr>
         <th>Total</th>
         <td>
-          <p>{{day1.balance + day1.ppsp + day1.changes + day1.detache + day1.legato + day1.colle + day1.martele + day1.staccato + day1.spiccato + day1.sautille + day1.ricochet + day1.chords3 + day1.chords4}}</p>
+          <p>{{day1.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day2.balance + day2.ppsp + day2.changes + day2.detache + day2.legato + day2.colle + day2.martele + day2.staccato + day2.spiccato + day2.sautille + day2.ricochet + day2.chords3 + day2.chords4}}</p>
+          <p>{{day2.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day3.balance + day3.ppsp + day3.changes + day3.detache + day3.legato + day3.colle + day3.martele + day3.staccato + day3.spiccato + day3.sautille + day3.ricochet + day3.chords3 + day3.chords4}}</p>
+          <p>{{day3.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day4.balance + day4.ppsp + day4.changes + day4.detache + day4.legato + day4.colle + day4.martele + day4.staccato + day4.spiccato + day4.sautille + day4.ricochet + day4.chords3 + day4.chords4}}</p>
+          <p>{{day4.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day5.balance + day5.ppsp + day5.changes + day5.detache + day5.legato + day5.colle + day5.martele + day5.staccato + day5.spiccato + day5.sautille + day5.ricochet + day5.chords3 + day5.chords4}}</p>
+          <p>{{day5.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day6.balance + day6.ppsp + day6.changes + day6.detache + day6.legato + day6.colle + day6.martele + day6.staccato + day6.spiccato + day6.sautille + day6.ricochet + day6.chords3 + day6.chords4}}</p>
+          <p>{{day6.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
         <td>
-          <p>{{day7.balance + day7.ppsp + day7.changes + day7.detache + day7.legato + day7.colle + day7.martele + day7.staccato + day7.spiccato + day7.sautille + day7.ricochet + day7.chords3 + day7.chords4}}</p>
+          <p>{{day7.rhTotal() | time:'mm':'hhh mmm':false}}</p>
         </td>
       </tr>
     </table>

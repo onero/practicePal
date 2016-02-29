@@ -33,7 +33,11 @@ gulp.task('bower', function () {
 
 
 gulp.task('watch', function() {
-  gulp.watch('src/js/controllers/main.js', ['concatScripts']);
+  gulp.watch([
+    'src/js/controllers/*.js',
+    'src/js/directives/*.js',
+    'src/js/routes/*.js',
+    'src/js/services/*.js'], ['minifyScripts']);
 });
 
 gulp.task('clean', function() {
