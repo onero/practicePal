@@ -14,7 +14,7 @@
             <td>6</td>
             <td>7</td>
           </tr>
-          <tr>
+          <tr ng-controller="basicsCtrl">
             <th>Basics</th>
             <td>
               <p>{{day1.basicsTotal() | time:'mm':'hhh mmm':false}}</p>
@@ -39,15 +39,29 @@
             </td>
           </tr>
         </tr>
-        <tr>
+        <tr ng-controller="scalesCtrl">
           <th>Scales</th>
-          <td>{{day1.scales}}</td>
-          <td>{{day2.scales}}</td>
-          <td>{{day3.scales}}</td>
-          <td>{{day4.scales}}</td>
-          <td>{{day5.scales}}</td>
-          <td>{{day6.scales}}</td>
-          <td>{{day7.scales}}</td>
+          <td>
+            <p>{{day1.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day2.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day3.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day4.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day5.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day6.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
+          <td>
+            <p>{{day7.scalesTotal() | time:'mm':'hhh mmm':false}}</p>
+          </td>
         </tr>
         <tr>
           <th>Etudes:</th>

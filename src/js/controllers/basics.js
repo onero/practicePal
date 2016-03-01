@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('practicePal')
+practicePal
   .controller('basicsCtrl', function($scope) {
 
     function Basics(data) {
@@ -26,7 +26,6 @@ angular.module('practicePal')
       angular.extend(this, data);
     }
 
-
     Basics.prototype.basicsTotal = function() {
       var basicsTotal = 0;
       for (var key in this.positions) {
@@ -48,6 +47,4 @@ angular.module('practicePal')
     for (var i = 0; i < 7; i++) {
       $scope['day' + (i + 1)] = new Basics({});
     }
-
-
   });

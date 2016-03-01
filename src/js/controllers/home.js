@@ -1,6 +1,7 @@
 'use strict'
 
-angular.module('practicePal')
+practicePal
   .controller('homeCtrl', function($scope) {
+
 
   });

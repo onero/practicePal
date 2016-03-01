@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('practicePal')
+practicePal
   .controller('scalesCtrl', function($scope) {
 
   function Scales(data) {

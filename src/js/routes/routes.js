@@ -6,8 +6,7 @@ practicePal.config(function ($stateProvider, $urlRouterProvider) {
  $stateProvider
    .state('home', {
      url: "/home",
-     templateUrl: "src/views/home.html",
-     controller: "homeCtrl"
+     templateUrl: "src/views/home.html"
    })
    .state('basics', {
      url: "/basics",
