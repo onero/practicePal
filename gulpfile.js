@@ -5,8 +5,7 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
   maps = require('gulp-sourcemaps'),
-  del = require('del'),
-  wiredep = require('wiredep').stream;
+  del = require('del')
 
   gulp.task('concatScripts', function () {
   return gulp.src([
@@ -14,21 +13,15 @@ var gulp = require('gulp'),
   'src/js/**/*.js'
   ])
     .pipe(concat('app.concat.js'))
-    .pipe(maps.write('./'))
-    .pipe(gulp.dest('dist'))
+    .pipe(maps.write('/'))
+    .pipe(gulp.dest('src/js'))
 });
 
 gulp.task("minifyScripts", ["concatScripts"], function() {
-	return gulp.src("dist/app.concat.js")
+	return gulp.src("src/js/app.concat.js")
 		.pipe(uglify({mangle: false}))
 		.pipe(rename('app.min.js'))
-		.pipe(gulp.dest('dist'));
-});
-
-gulp.task('bower', function () {
-  gulp.src('./index.html')
-    .pipe(wiredep({ src: 'index.html' }))
-    .pipe(gulp.dest('./'));
+		.pipe(gulp.dest('src/js'));
 });
 
 
@@ -37,12 +30,13 @@ gulp.task('watch', function() {
     'src/js/controllers/*.js',
     'src/js/directives/*.js',
     'src/js/routes/*.js',
-    'src/js/services/*.js'], ['minifyScripts']);
+    'src/js/services/*.js'], ['default']);
 });
 
 gulp.task('clean', function() {
-  del([
-    'dist']);
+  return del([
+    'src/js/app.min.js',
+    'src/js/app.concat.js']);
 });
 
 gulp.task("build", ["minifyScripts"], function()
@@ -54,6 +48,6 @@ gulp.task("build", ["minifyScripts"], function()
 });
 
 //TODO look at deletion problem
-gulp.task("default", ["bower"], function() {
+gulp.task("default", ['clean'], function() {
     gulp.start('build');
 });
