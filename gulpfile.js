@@ -47,7 +47,6 @@ gulp.task("build", ["minifyScripts"], function()
   // .pipe(gulp.dest('dist'));
 });
 
-//TODO look at deletion problem
 gulp.task("default", ['clean'], function() {
     gulp.start('build');
 });
